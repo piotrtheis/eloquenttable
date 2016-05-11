@@ -1,0 +1,24 @@
+{
+    "name": "tysdever/eloquenttable",
+    "description": "An HTML table generator for laravel collections, upgrade for Steve Bauman package",
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "Piotr Theis",
+            "email": "piotr.theis@etendard.pl"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.*",
+        "stevebauman/eloquenttable": "1.1.*",
+        "tysdever/htmlform": "5.3",
+        "maatwebsite/excel": "~2.1.0",
+        "dompdf/dompdf": "~0.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tysdever\\EloquentTable\\": "src/EloquentTable/"
+        }
+    },
+    "minimum-stability": "stable"
+}
