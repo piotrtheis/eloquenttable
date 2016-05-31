@@ -11,7 +11,7 @@
     "require": {
         "illuminate/support": "5.*",
         "stevebauman/eloquenttable": "1.1.*",
-        "tysdever/htmlform": "5.3",
+        "laravelcollective/html": "5.2.*",
         "maatwebsite/excel": "~2.1.0",
         "dompdf/dompdf": "~0.6.1"
     },
