@@ -11,16 +11,27 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\HtmlString;
-use Session;
 use Stevebauman\EloquentTable\EloquentTableServiceProvider;
 use Stevebauman\EloquentTable\TableTrait as BaseTableTrait;
 use Tysdever\EloquentTable\Collection\TableCollection;
 use Tysdever\EloquentTable\Contracts\SearcherPresenter;
 use Tysdever\Repository\Contracts\Criteria;
+use Tysdever\EloquentTable\Builder;
 
 trait TableTrait
 {
     use BaseTableTrait, TableStreamerTrait;
+    
+    /**
+     * Create a new Eloquent query builder for the model.
+     *
+     * @param  \Illuminate\Database\Query\Builder  $query
+     * @return Builder
+     */
+    public function newEloquentBuilder($query)
+    {
+        return new Builder($query);
+    }
 
     /**
      * Stor row actions
